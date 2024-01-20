@@ -1,0 +1,42 @@
+<div class="w-screen h-20 flex justify-around items-center">
+    <div class="title flex items-center">
+        <img src="../../../assets/favicon.png" class="max-h-20" alt="logo">
+        <h1 class="text-3xl font-bold">Springfield Olympiads</h1>
+    </div>
+
+    <!-- Display links or menu icon based on screen size -->
+    <div class="links hidden md:flex">
+        <ul class="flex ">
+            <li class="mr-4 transition-all hover:text-blue-600"><a href="https://sfoly.com/home">Home</a></li>
+            <li class="mr-4 transition-all hover:text-blue-600"><a href="https://sfoly.com/about">About</a></li>
+            <li class="mr-4 transition-all hover:text-blue-600"><a href="https://sfoly.com/olympiad/siso">Olympiads</a></li>
+            <li class="mr-4 transition-all hover:text-blue-600"><a href="https://sfoly.com/faqs">FAQ's</a></li>
+            <li class="mr-4 transition-all hover:text-blue-600"><a href="https://sfoly.com/student-registration">Register</a></li>
+            <li class="mr-4 transition-all hover:text-blue-600"><a href="https://sfoly.com/contact">Contact Us</a></li>
+            <li class="transition-all hover:text-blue-600"><a href="https://sfoly.com/institute-login">Institute Login</a></li>
+        </ul>
+    </div>
+
+    <!-- Menu icon for smaller screens -->
+    <div id="menuIcon" (click)="toggleMenu()" class="md:hidden">
+        <!-- Insert your menu icon SVG or use Tailwind CSS icons here -->
+        <!-- For simplicity, a basic menu icon is used here -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            class="h-6 w-6 text-black cursor-pointer">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+
+        <!-- Dropdown menu for smaller screens -->
+        <div class="absolute top-16 right-0 bg-white border border-gray-300 p-2">
+            <ul class="flex flex-col">
+                <li class="mb-2">Home</li>
+                <li class="mb-2">About</li>
+                <li class="mb-2">Olympiads</li>
+                <li class="mb-2">FAQ's</li>
+                <li class="mb-2">Register</li>
+                <li class="mb-2">Contact Us</li>
+                <li>Institute Login</li>
+            </ul>
+        </div>
+    </div>
+</div>
